@@ -1,4 +1,6 @@
-body {
+html, body {
+	margin: 0;
+	padding: 0;
 	background: #e1e1e1;
 	color: #333;
 	font: 100%/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -13,22 +15,73 @@ h1 {
 }
 
 .container {
-	max-width: 50em;
+	position: relative;
 	height: auto;
 	overflow: hidden;
-	margin: 2em auto 0;
-	border: 1px solid #ddd;
+}
+
+.main {
+	position: relative;
+	width: 920px;
+	height: 350px;
+	overflow: hidden;
+	margin: 5em auto 0;
 	text-align: center;
 }
 
 canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
 	background: #8b8b8b;
 	cursor: crosshair;
+	border: 1px solid #a9a9a9;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 180px;
+}
+
+.sidebar .range {
+	float: left;
+	margin: 0.5em 0;
+}
+
+.sidebar .output {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.sidebar label {
+	display: block;
+	width: 20px;
+	margin: 0;
+	float: left;
+	clear: left;
+}
+
+.sidebar input {
+	float: left;
+	width: 100px;
+	margin: 0 0 0.5em;
+}
+
+.sidebar span {
+	display: block;
+	float: left;
+	padding: 0 5px;
 }
 
 label, input {
 	font-size: 1.25em;
 	vertical-align: middle;
+}
+
+label {
+	margin-right: 10px;
 }
 
 input {
@@ -37,35 +90,9 @@ input {
 	text-align: center;
 }
 
-input + label {
-	margin-left: 50px;
-}
-
-.block {
-	display: block;
-	width: 25px;
-	height: 25px;
-	float: left;
-	margin: 5px;
-	cursor: pointer;
-	overflow: visible;
-	z-index: 1;
-}
-
-.block:hover {
-	position: relative;
-}
-
-.block:hover:after {
+.output-container {
+	width: 100%;
 	position: absolute;
-	top: -10px;
-	left: 10px;
-	display: inline-block;
-	width: 80px;
-	height: auto;
-	background: #f1f1f1;
-	content: attr(data-color);
-	font-size: 0.75em;
-	z-index: 22;
-	border: 1px solid #333;
+	left: 0;
+	bottom: 0;
 }
