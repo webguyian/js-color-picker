@@ -1,3 +1,11 @@
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -12,6 +20,11 @@ h1 {
 	text-shadow: 1px 1px 0 #fff;
 }
 
+h2 {
+	text-align: left;
+	margin: 0 0 1em;
+}
+
 p {
 	margin: 0.75em 0;
 }
@@ -21,7 +34,7 @@ canvas {
 	height: 200%;
 	background: #8b8b8b;
 	cursor: crosshair;
-	border: 1px solid #a9a9a9;
+	border: 1px solid #cacaca;
 }
 
 label, input {
@@ -53,7 +66,6 @@ input {
 	text-align: center;
 }
 
-
 .sidebar .output-sm {
 	width: 50px;
 }
@@ -79,6 +91,39 @@ input {
 .output {
 	display: inline-block;
 	margin-bottom: 0.5em;
+}
+
+.swatches {
+	position: relative;
+	background: #d3d3d3;
+	max-width: 700px;
+	height: auto;
+	margin: 2em auto 0;
+	padding: 1em 1em 3em;
+	border: 1px solid #cacaca;
+}
+
+.swatch {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0 10px 10px 0;
+	cursor: pointer;
+	-webkit-transition: all 600ms;
+	-moz-transition: all 600ms;
+	-ms-transition: all 600ms;
+	transition: all 600ms;
+}
+
+.swatch:hover {
+	box-shadow: 0 0 6px 3px white;
+}
+
+.instructions {
+	position: absolute;
+	bottom: 0.5em;
+	width: 100%;
+	text-align: center;
 }
 
 @media screen and (min-width: 30em) {
