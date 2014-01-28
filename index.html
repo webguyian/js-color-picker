@@ -6,29 +6,32 @@
 	<link rel="stylesheet" href="style.css">
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<body>
-	<div class="container">
-		<h1>JS Color Picker</h1>
-		<div class="main">
-			<canvas id="colorpicker" width="700" height="256">
-				Your browser does not support canvas. Sorry. :(
-			</canvas>
-			<aside class="sidebar">
-				<div class="output output-red">0</div>
-				<div class="range"><label>R</label><span>0</span><input type="range" min="0" max="255" class="input" name="input-red" value="0" data-target="red"><span>255</span></div>
-				<div class="output output-green">0</div>
-				<div class="range"><label>G</label><span>0</span><input type="range" min="0" max="255" class="input" name="input-green" value="0" data-target="green"><span>255</span></div>
-				<div class="output output-blue">0</div>
-				<div class="range"><label>B</label><span>0</span><input type="range" min="0" max="255" class="input" name="input-blue" value="0" data-target="blue"><span>255</span></div>
-			</aside>
-			<output class="output-container">
-			<p><label for="output-hex">HEX:</label> <input type="text" name="output-hex">
-				<label for="output-rgb">RGB:</label> <input type="text" name="output-rgb"></p>
-			</output>
-			</div>
-		</div>
-		<script src="script.js"></script>
-	</body>
-	</html>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<h1>JS Color Picker</h1>
+				<aside class="sidebar">
+					<div class="slider"><p><label for="output-red">Red:</label> <input type="text" class="output-sm" name="output-red" disabled></p>
+						<p><input type="range" min="0" max="255" class="input" name="input-red" value="0" data-target="red"></p></div>
+						<div class="slider">
+							<p><label for="output-green">Green:</label> <input type="text" class="output-sm" name="output-green" disabled></p>
+							<p><input type="range" min="0" max="255" class="input" name="input-green" value="0" data-target="green"></p>
+						</div>
+						<div class="slider">
+							<p><label for="output-blue">Blue:</label><input type="text" class="output-sm" name="output-blue" disabled></p>
+							<p><input type="range" min="0" max="255" class="input" name="input-blue" value="0" data-target="blue"></p>
+						</div>
+					</aside>
+			<main class="main">
+				<canvas id="colorpicker" width="700" height="256">
+					Your browser does not support canvas. Sorry. :(
+				</canvas>
+					<p><output class="output"><label for="output-hex">HEX:</label> <input type="text" name="output-hex" disabled></output>
+						<output class="output">
+						<label for="output-rgb">RGB:</label> <input type="text" name="output-rgb" disabled></output></p>
+				</main>
+				</div>
+				<script src="script.js"></script>
+			</body>
+			</html>
