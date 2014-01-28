@@ -96,7 +96,7 @@ input {
 .swatches {
 	position: relative;
 	background: #d3d3d3;
-	max-width: 700px;
+	max-width: 90%;
 	height: auto;
 	margin: 2em auto 0;
 	padding: 1em 1em 3em;
@@ -122,6 +122,7 @@ input {
 .instructions {
 	position: absolute;
 	bottom: 0.5em;
+	left: 0;
 	width: 100%;
 	text-align: center;
 }
@@ -190,6 +191,10 @@ input {
 
 	.sidebar input[type="range"] {
 		max-width: none;
+	}
+
+	.swatches {
+		max-width: 700px;
 	}
 
 }
