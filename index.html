@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Color Picker</title>
+	<link rel="stylesheet" href="style.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<h1>JS Color Picker</h1>
+				<aside class="sidebar">
+					<div class="slider"><p><label for="output-red">Red:</label> <input type="text" class="output-sm" name="output-red" disabled></p>
+						<p><input type="range" min="0" max="255" class="input" name="input-red" value="0" data-target="red"></p></div>
+						<div class="slider">
+							<p><label for="output-green">Green:</label> <input type="text" class="output-sm" name="output-green" disabled></p>
+							<p><input type="range" min="0" max="255" class="input" name="input-green" value="0" data-target="green"></p>
+						</div>
+						<div class="slider">
+							<p><label for="output-blue">Blue:</label><input type="text" class="output-sm" name="output-blue" disabled></p>
+							<p><input type="range" min="0" max="255" class="input" name="input-blue" value="0" data-target="blue"></p>
+						</div>
+					</aside>
+			<main class="main">
+				<canvas id="colorpicker" width="700" height="256">
+					Your browser does not support canvas. Sorry. :(
+				</canvas>
+					<p><output class="output"><label for="output-hex">HEX:</label> <input type="text" name="output-hex" disabled></output>
+						<output class="output">
+						<label for="output-rgb">RGB:</label> <input type="text" name="output-rgb" disabled></output></p>
+					<div class="swatches"><h2>Your Swatches:</h2><p class="instructions">Add a swatch by clicking inside the color picker.</p></div>
+				</main>
+				</div>
+				<script src="script.js"></script>
+			</body>
+			</html>
